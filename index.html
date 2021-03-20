@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Radiation Data Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="mapAndBar" id='mapAndBar'>
+        <div class='sidebar' id='sidebar'>
+            <div id='listings' class='listings'></div>
+        </div>
+        <div id="map" class="map"></div>
+        <div class='sortConsole' id='sortConsole'>
+            <h1>Radiation Data</h1>
+            <p>Data: <a href='https://safecast.org/data/'>Safecast Radiation Data</a>, 2016 - 2020</p>
+            <div class='session'>
+              <h2>Radiation value (cpm)</h2>
+              <div class='row colors'>
+              </div>
+              <div class='row labels'>
+                <div class='label'>0</div>
+                <div class='label'>30</div>
+                <div class='label'>60</div>
+                <div class='label'>90</div>
+                <div class='label'>120</div>
+                <div class='label'>150</div>
+              </div>
+            </div>
+            <div class='session'>
+              <h2>Year</h2>
+              <div class='row' id='filters'>
+                <input id='all' type='radio' name='toggle' value='all' checked='checked'>
+                <label for='all'>All</label>
+                <input id='2016' type='radio' name='toggle' value='2016'>
+                <label for='2016'>2016</label>
+                <input id='2017' type='radio' name='toggle' value='2017'>
+                <label for='2017'>2017</label>
+                <input id='2018' type='radio' name='toggle' value='2018'>
+                <label for='2018'>2018</label>
+                <input id='2019' type='radio' name='toggle' value='2019'>
+                <label for='2019'>2019</label>
+                <input id='2020' type='radio' name='toggle' value='2020'>
+                <label for='2020'>2020</label>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
